@@ -1,5 +1,21 @@
-import 'package:dart_percabangan_if_else/dart_percabangan_if_else.dart' as dart_percabangan_if_else;
-
+import 'dart:io';
 void main(List<String> arguments) {
-  print('Hello world: ${dart_percabangan_if_else.calculate()}!');
+  String Intro = "Program Dart Percabangan" ;
+  print(Intro);
+  print("\n");
+  print("Angka: ");
+  int Angka = int.tryParse(stdin.readLineSync());
+  String Status ; 
+  if (Angka < 0) {
+    Status = 'Negatif';
+  } else if (Angka > 0) {
+    Status = 'Positif';
+  } else { 
+    Status = 'Nol'; 
+  }
+  
+  String Notif = 'Angka ' + Angka.toString() + ' merupakan bilangan ' + Status ;
+  print(Notif);
+  print('Program Selesai');
+  
 }
