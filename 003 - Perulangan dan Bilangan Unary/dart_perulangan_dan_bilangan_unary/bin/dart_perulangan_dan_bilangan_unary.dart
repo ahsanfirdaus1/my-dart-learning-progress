@@ -1,5 +1,17 @@
-import 'package:dart_perulangan_dan_bilangan_unary/dart_perulangan_dan_bilangan_unary.dart' as dart_perulangan_dan_bilangan_unary;
-
+import 'dart:io';
 void main(List<String> arguments) {
-  print('Hello world: ${dart_perulangan_dan_bilangan_unary.calculate()}!');
+  String Intro = 'Program Perulangan For';
+  print(Intro);
+
+  print('Mulai: ');
+  int Mulai = int.tryParse(stdin.readLineSync());
+  print('Akhir: ');
+  int Akhir = int.tryParse(stdin.readLineSync());
+  print('Selisih / Perbedaan :');
+  int Selisih = int.tryParse(stdin.readLineSync());
+  print('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+
+  for (Mulai; Mulai < Akhir; Mulai += Selisih ){
+    print(Mulai.toString() + '\n');
+  }
 }
